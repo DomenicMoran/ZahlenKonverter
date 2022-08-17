@@ -17,10 +17,8 @@ struct ContentView: View {
         VStack {
             Menu {
                 ForEach(inputSystems.sorted(by: <), id: \.key) { base, name in
-                    Button {
+                    Button(name) {
                         inputBase = base
-                    } label: {
-                        Text(name)
                     }
                 }
 
